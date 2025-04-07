@@ -1,0 +1,21 @@
+.list {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  background-color: #121826;
+  border: 1px solid #313e62;
+  border-radius: 10px;
+
+  &_el_active {
+    padding: 5px 10px;
+    background-color: #313e62;
+    border-radius: 10px;
+  }
+
+  &_el {
+    padding: 5px;
+  }
+}

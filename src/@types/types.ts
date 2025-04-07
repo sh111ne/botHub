@@ -1,0 +1,156 @@
+export type Chats = {
+  created_at: string;
+  deleted: boolean;
+  group_id: null;
+  highlight: null;
+  id: string;
+  initial: boolean;
+  last_message_at: string;
+  model: Model;
+  model_function_id: null;
+  model_id: string;
+  name: string;
+  order: number;
+  platform: string;
+  total_caps: number;
+  user_id: string;
+};
+
+export type Messages = {
+  action_type: null;
+  additional_content: null;
+  all_buttons: string[];
+  attachments: string[];
+  buttons: string[];
+  chat_id: string;
+  choiced: boolean;
+  content: string;
+  created_at: string;
+  disabled: boolean;
+  full_content: null;
+  id: string;
+  images: string[];
+  isEncrypted: boolean;
+
+  job: {
+    chat_id: string;
+    created_at: string;
+    error: null;
+    error_code: null;
+    id: string;
+    is_stop_allowed: boolean;
+    mj_native_message_id: null;
+    mj_remaining_timeout: null;
+    name: string;
+    progress: number;
+    status: string;
+    timeout: number;
+    user_message_id: null;
+  };
+
+  job_id: string;
+  mj_mode: null;
+  model: Model;
+  model_id: string;
+  model_version: null;
+  next_version_id: null;
+  platform: null;
+  previous_version_id: null;
+  reasoning_content: string;
+  reasoning_time_ms: null;
+  request_id: null;
+  role: string;
+  search_results: null;
+  search_status: null;
+  set: null;
+  set_id: null;
+  status: string;
+  tokens: number;
+  transaction: {
+    amount: number;
+    created_at: string;
+    currency: string;
+    deleted: boolean;
+    enterprise_id: null;
+    external_id: null;
+    from_user_id: null;
+    id: string;
+    meta: null;
+    plan_id: null;
+    provider: string;
+    referral_id: null;
+    status: string;
+    type: string;
+    user_id: string;
+  };
+  transaction_id: string;
+  user_id: string;
+  version: number;
+  video: null;
+  video_id: null;
+  voice: null;
+  voice_id: null;
+};
+
+export type Model = {
+  auto_update_pricing: boolean;
+  child_provider_id: null;
+  context_length: number;
+  created_at: string;
+  custom: boolean;
+  deleted: boolean;
+  description: null;
+  disabled: boolean;
+  disabledTelegram: boolean;
+  disabledWeb: boolean;
+  features: string[];
+  icon: null;
+  icon_id: null;
+  id: string;
+  label: string;
+  max_tokens: number;
+  message_color: string;
+  order: number;
+  owned_by: string;
+  parent_id: null;
+  prefix: string;
+  pricing: null;
+  provider_id: null;
+  used_count: number;
+  parent: {
+    auto_update_pricing: boolean;
+    child_provider_id: null;
+    context_length: number;
+    created_at: string;
+    custom: boolean;
+    deleted: boolean;
+    deleted_at: null;
+    description: null;
+    disabled: boolean;
+    disabledTelegram: boolean;
+    disabledWeb: boolean;
+    features: string[];
+    icon: null;
+    icon_id: null;
+    id: string;
+    label: string;
+    max_tokens: number;
+    message_color: string;
+    order: number;
+    owned_by: string;
+    parent_id: null;
+    prefix: string;
+    pricing: null;
+    provider_id: null;
+    used_count: number;
+  };
+};
+
+export type PropsAddChat = {
+  close: (e: boolean) => void;
+};
+
+export type PropsLanguage = {
+  selectLanguage: (e: string) => void;
+  language: string;
+};

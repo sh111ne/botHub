@@ -1,0 +1,92 @@
+.modal {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &_content {
+    border-radius: 10px;
+    background-color: #222b44;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 15px 25px 25px 25px;
+    gap: 10px;
+
+    &_title {
+      width: 100%;
+    }
+
+    &_button {
+      padding: 15px;
+      border-radius: 10px;
+      background-color: #1c64f2;
+      color: #fff;
+      border: none;
+      width: 100%;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &_input {
+      background-color: #121825;
+      padding: 15px;
+      border: 1px solid #313e62;
+      border-radius: 10px;
+      color: #fff;
+      width: 100%;
+      box-sizing: border-box;
+
+      &::placeholder {
+        color: #616d8d;
+        opacity: 1;
+      }
+
+      &::-ms-input-placeholder {
+        color: #616d8d;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:focus {
+        border: 1px solid #313e62;
+        outline: none;
+      }
+    }
+
+    &_exit {
+      background: none;
+      border: none;
+      width: 20px;
+      height: 20px;
+
+      transition: 0.3s;
+      svg {
+        path {
+          transition: 0.2s;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+
+        svg {
+          path {
+            stroke: #616d8d;
+          }
+        }
+      }
+    }
+  }
+}
